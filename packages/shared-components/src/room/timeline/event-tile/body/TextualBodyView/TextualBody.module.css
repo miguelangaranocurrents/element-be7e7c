@@ -41,6 +41,12 @@
     display: flex;
 }
 
+/* Let the body shrink to the tile width rather than growing to fit an unbreakable code block,
+   which would push the rest of an edited message out of view. */
+.annotated > :first-child {
+    min-width: 0;
+}
+
 .annotatedInline {
     display: inline-flex;
 }
