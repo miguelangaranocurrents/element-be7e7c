@@ -275,6 +275,9 @@ export class TextualBodyViewModel
     }
 
     public onRootClick = (event: MouseEvent<HTMLDivElement>): void => {
+        // A link or pill that has already handled the click (e.g. to open a user's profile in-app) must not be redirected
+        if (event.defaultPrevented) return;
+
         let target: HTMLLinkElement | null = event.target as HTMLLinkElement;
 
         if (target.nodeName !== "A") {
