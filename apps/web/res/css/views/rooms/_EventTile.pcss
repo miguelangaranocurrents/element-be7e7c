@@ -46,6 +46,12 @@ $left-gutter: 64px;
         }
     }
 
+    /* The body slot clips its direct child, which is this wrapper when editing. Don't clip the
+       autocomplete that opens above the composer. */
+    .mx_EditMessageComposerWrapper {
+        overflow: visible;
+    }
+
     .mx_EventTile_searchHighlight {
         background-color: $accent;
         color: $accent-fg-color;
